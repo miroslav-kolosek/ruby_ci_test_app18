@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  include LibrarySearchable
+
   has_many :comments, dependent: :destroy
 
   validates :title, presence: true
