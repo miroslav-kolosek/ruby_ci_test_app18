@@ -55,6 +55,23 @@ RSpec.describe Article, type: :model do
           expect(response.results.total).to eq 1
         end
       end
+
+      context "when two result" do
+        let!(:article_4) { Article.create!(title: 'Ruby on Rails', body: 'Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code while accomplishing more than many other languages and frameworks. Experienced Rails developers also report that it makes web application development more fun.', status: 'private') }
+        let!(:article_5) { Article.create!(title: 'Ruby on Rails 2', body: 'Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code while accomplishing more than many other languages and frameworks. Experienced Rails developers also report that it makes web application development more fun.', status: 'private') }
+
+        before do
+          Article.__elasticsearch__.delete_index! rescue nil
+          Article.__elasticsearch__.create_index!
+          Article.import
+          sleep 2
+        end
+
+        it do
+          response = Article.search("Rails")
+          expect(response.results.total).to eq 2
+        end
+      end
     end
   end
 end
