@@ -8,7 +8,6 @@ module LibrarySearchable
     include Elasticsearch::Model::Callbacks
 
     index_name Rails.env.test? ? "library_article_test" : "library_article"
-    document_type "doc"
 
     mappings do
       indexes :title, type: :text

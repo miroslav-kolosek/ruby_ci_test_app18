@@ -99,17 +99,17 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    elasticsearch (6.1.0)
-      elasticsearch-api (= 6.1.0)
-      elasticsearch-transport (= 6.1.0)
-    elasticsearch-api (6.1.0)
+    elasticsearch (7.2.1)
+      elasticsearch-api (= 7.2.1)
+      elasticsearch-transport (= 7.2.1)
+    elasticsearch-api (7.2.1)
       multi_json
-    elasticsearch-model (6.1.1)
+    elasticsearch-model (7.2.1)
       activesupport (> 3)
-      elasticsearch (~> 6)
+      elasticsearch (~> 7)
       hashie
-    elasticsearch-rails (6.1.1)
-    elasticsearch-transport (6.1.0)
+    elasticsearch-rails (7.2.1)
+    elasticsearch-transport (7.2.1)
       faraday
       multi_json
     erubi (1.11.0)
@@ -118,7 +118,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faraday (2.7.8)
+    faraday (2.7.10)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -350,9 +350,9 @@ DEPENDENCIES
   capybara
   database_cleaner
   debug
-  elasticsearch (= 6.1)
-  elasticsearch-model (= 6.1.1)
-  elasticsearch-rails (= 6.1.1)
+  elasticsearch (= 7.2.1)
+  elasticsearch-model (= 7.2.1)
+  elasticsearch-rails (= 7.2.1)
   factory_bot_rails
   importmap-rails
   jbuilder

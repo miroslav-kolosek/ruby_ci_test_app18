@@ -63,9 +63,9 @@ gem 'rubocop-rspec', require: false
 
 gem 'redis-rails'
 
-gem 'elasticsearch', "6.1"
-gem "elasticsearch-model", "6.1.1"
-gem "elasticsearch-rails", "6.1.1"
+gem 'elasticsearch', "7.2.1"
+gem "elasticsearch-model", "7.2.1"
+gem "elasticsearch-rails", "7.2.1"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
