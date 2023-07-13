@@ -94,4 +94,5 @@ group :test do
   gem "webdrivers"
   gem 'shoulda-matchers', '~> 5.0'
   gem 'database_cleaner'
+  gem "vcr"
 end
